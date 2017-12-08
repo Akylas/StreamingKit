@@ -70,7 +70,7 @@
 
 -(void) audioPlayerViewPlayFromIcecastSelected:(AudioPlayerView *)audioPlayerView
 {
-    NSURL* url = [NSURL URLWithString:@"http://shoutmedia.abc.net.au:10326"];
+    NSURL* url = [NSURL URLWithString:@"http://104.130.240.176:1935/vod/mp4:sample.mp4/playlist.m3u8"];
     
     STKDataSource* dataSource = [STKAudioPlayer dataSourceFromURL:url];
     

@@ -19,7 +19,6 @@
 		A1115950188D686000641365 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1115938188D686000641365 /* UIKit.framework */; };
 		A1115958188D686000641365 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1115956188D686000641365 /* InfoPlist.strings */; };
 		A111595A188D686000641365 /* ExampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1115959188D686000641365 /* ExampleAppTests.m */; };
-		A1115964188D691500641365 /* libStreamingKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1115963188D691500641365 /* libStreamingKit.a */; };
 		A1115967188D6AEE00641365 /* AudioPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1115966188D6AEE00641365 /* AudioPlayerView.m */; };
 		A111596C188D6C8100641365 /* sample.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A111596B188D6C8100641365 /* sample.m4a */; };
 		A111596F188D6DB100641365 /* SampleQueueId.m in Sources */ = {isa = PBXBuildFile; fileRef = A111596E188D6DB100641365 /* SampleQueueId.m */; };
@@ -27,6 +26,7 @@
 		A17FFB6318A0028300BAA7FF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17FFB6218A0028300BAA7FF /* AudioToolbox.framework */; };
 		A17FFB6918A002E400BAA7FF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F5E491189EB3F20070B03F /* AVFoundation.framework */; };
 		A1EBEE64188DE34500681B04 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1EBEE63188DE34500681B04 /* SystemConfiguration.framework */; };
+		D58517421A27580C0079B284 /* libStreamingKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D58517391A2758000079B284 /* libStreamingKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,41 @@
 			proxyType = 1;
 			remoteGlobalIDString = A1115930188D686000641365;
 			remoteInfo = ExampleApp;
+		};
+		D58517381A2758000079B284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D58517301A2758000079B284 /* StreamingKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1E7C4C8188D57F50010896F;
+			remoteInfo = StreamingKit;
+		};
+		D585173A1A2758000079B284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D58517301A2758000079B284 /* StreamingKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1E7C4D8188D57F60010896F;
+			remoteInfo = StreamingKitTests;
+		};
+		D585173C1A2758000079B284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D58517301A2758000079B284 /* StreamingKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1A49969189E744400E2A2E2;
+			remoteInfo = StreamingKitMac;
+		};
+		D585173E1A2758000079B284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D58517301A2758000079B284 /* StreamingKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1A4997A189E744500E2A2E2;
+			remoteInfo = StreamingKitMacTests;
+		};
+		D58517401A2758080079B284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D58517301A2758000079B284 /* StreamingKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A1E7C4C7188D57F50010896F;
+			remoteInfo = StreamingKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -67,6 +102,7 @@
 		A1EBEE63188DE34500681B04 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A1F5E48F189EB3CB0070B03F /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		A1F5E491189EB3F20070B03F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D58517301A2758000079B284 /* StreamingKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = StreamingKit.xcodeproj; path = ../StreamingKit/StreamingKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +110,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D58517421A27580C0079B284 /* libStreamingKit.a in Frameworks */,
 				A17FFB6918A002E400BAA7FF /* AVFoundation.framework in Frameworks */,
 				A17FFB6318A0028300BAA7FF /* AudioToolbox.framework in Frameworks */,
 				A1EBEE64188DE34500681B04 /* SystemConfiguration.framework in Frameworks */,
-				A1115964188D691500641365 /* libStreamingKit.a in Frameworks */,
 				A1115937188D686000641365 /* CoreGraphics.framework in Frameworks */,
 				A1115939188D686000641365 /* UIKit.framework in Frameworks */,
 				A1115935188D686000641365 /* Foundation.framework in Frameworks */,
@@ -100,6 +136,7 @@
 		A1115928188D686000641365 = {
 			isa = PBXGroup;
 			children = (
+				D58517301A2758000079B284 /* StreamingKit.xcodeproj */,
 				A111593A188D686000641365 /* ExampleApp */,
 				A1115953188D686000641365 /* ExampleAppTests */,
 				A1115933188D686000641365 /* Frameworks */,
@@ -186,6 +223,17 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		D58517311A2758000079B284 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D58517391A2758000079B284 /* libStreamingKit.a */,
+				D585173B1A2758000079B284 /* StreamingKitTests.xctest */,
+				D585173D1A2758000079B284 /* libStreamingKitMac.a */,
+				D585173F1A2758000079B284 /* StreamingKitMacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,6 +248,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D58517411A2758080079B284 /* PBXTargetDependency */,
 			);
 			name = ExampleApp;
 			productName = ExampleApp;
@@ -248,6 +297,12 @@
 			mainGroup = A1115928188D686000641365;
 			productRefGroup = A1115932188D686000641365 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D58517311A2758000079B284 /* Products */;
+					ProjectRef = D58517301A2758000079B284 /* StreamingKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A1115930188D686000641365 /* ExampleApp */,
@@ -255,6 +310,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D58517391A2758000079B284 /* libStreamingKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libStreamingKit.a;
+			remoteRef = D58517381A2758000079B284 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D585173B1A2758000079B284 /* StreamingKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = StreamingKitTests.xctest;
+			remoteRef = D585173A1A2758000079B284 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D585173D1A2758000079B284 /* libStreamingKitMac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libStreamingKitMac.a;
+			remoteRef = D585173C1A2758000079B284 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D585173F1A2758000079B284 /* StreamingKitMacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = StreamingKitMacTests.xctest;
+			remoteRef = D585173E1A2758000079B284 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A111592F188D686000641365 /* Resources */ = {
@@ -305,6 +391,11 @@
 			isa = PBXTargetDependency;
 			target = A1115930188D686000641365 /* ExampleApp */;
 			targetProxy = A1115951188D686000641365 /* PBXContainerItemProxy */;
+		};
+		D58517411A2758080079B284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = StreamingKit;
+			targetProxy = D58517401A2758080079B284 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

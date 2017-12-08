@@ -35,6 +35,7 @@
 #import "STKAudioPlayer.h"
 #import "AudioToolbox/AudioToolbox.h"
 #import "STKHTTPDataSource.h"
+#import "STKHTTPMetadataSource.h"
 #import "STKAutoRecoveringHTTPDataSource.h"
 #import "STKLocalFileDataSource.h"
 #import "STKQueueEntry.h"
@@ -628,6 +629,24 @@ static void AudioFileStreamPacketsProc(void* clientData, UInt32 numberBytes, UIn
     
     return retval;
 }
+
+
++(STKDataSource*) dataSourceWithMetadataFromURL:(NSURL*)url httpRequestHeaders:(NSDictionary *)requestHeaders
+{
+    STKDataSource* retval = nil;
+    
+    if ([url.scheme caseInsensitiveCompare:@"http"] == NSOrderedSame || [url.scheme caseInsensitiveCompare:@"https"] == NSOrderedSame)
+    {
+        STKHTTPMetadataSource *metadataSource = [[STKHTTPMetadataSource alloc] initWithURL:url httpRequestHeaders:requestHeaders];
+        metadataSource.sampleRate = canonicalAudioStreamBasicDescription.mSampleRate;
+        metadataSource.decompressedBitsPerFrame = canonicalAudioStreamBasicDescription.mBytesPerFrame * 8;
+        
+        retval = [[STKAutoRecoveringHTTPDataSource alloc] initWithHTTPDataSource:metadataSource];
+    }
+    
+    return retval;
+}
+
 
 -(void) clearQueue
 {
@@ -2732,7 +2751,7 @@ static OSStatus OutputRenderCallback(void* inRefCon, AudioUnitRenderActionFlags*
 		}
     }
 
-	if (frameFilters)
+	if (frameFilters && 0 != totalFramesCopied)
 	{
 		NSUInteger count = frameFilters.count;
 		AudioStreamBasicDescription asbd = canonicalAudioStreamBasicDescription;

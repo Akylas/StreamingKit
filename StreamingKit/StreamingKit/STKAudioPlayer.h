@@ -169,6 +169,9 @@ typedef void(^STKFrameFilter)(UInt32 channelsPerFrame, UInt32 bytesPerFrame, UIn
 /// URLs with unrecognised schemes will return nil.
 +(STKDataSource*) dataSourceFromURL:(NSURL*)url;
 
+/// Creates a datasource from a URL that can provide embedded metadata.
++(STKDataSource*) dataSourceWithMetadataFromURL:(NSURL*)url httpRequestHeaders:(NSDictionary *)requestHeaders;
+
 /// Initializes a new STKAudioPlayer with the default options
 -(id) init;
 
